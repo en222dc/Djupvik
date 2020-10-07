@@ -1,0 +1,367 @@
+/* || GENERAL STYLES - BACKGROUNDS, COLORS, TEXT AND PADDINGS ||*/
+html{font-size: 100%;}
+
+body, p a, nav a, td a, #temp p, .dropdown-content a{color: #212122;}
+main, article, footer{background: #f7fae7f2;}
+
+body {
+  font-family: 'Arimo', Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+  background: #97AEBD;
+  background-image: url(../images/bgKarlso.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: 'Parisienne', cursive, Tahoma, Geneva, sans-serif;
+  font-size: 4rem;
+  padding: 1.4rem;
+}
+
+h2, h3, h4, #temp p {font-family: 'Tangerine', cursive, Tahoma, Geneva, sans-serif;}
+
+h3, h4{padding: 0.8rem 1.6rem;}
+
+h2 {
+  font-size: 2.7rem;
+  padding: 1.3rem 1rem 0.8rem 1.6rem;
+}
+
+h3 {font-size: 2.4rem;}
+
+h4{
+  font-size: 2.1rem;
+  padding-top: 1rem;
+}
+
+p, li, select, input, textarea {font-size: 0.9rem;}
+
+p, .navLi{padding: 0.1rem 1.6rem 1rem 1.6rem;}
+
+li{padding: 0.2rem 1.6rem}
+
+li:last-of-type{padding-bottom: 1rem;}
+
+p a{font-style: italic;}
+
+p a:visited{color: #660c5e}
+
+p a:hover, p a:focus {
+    color: #0f1ee4;
+    background-color: #e7e7e7;
+    outline: none;
+}
+
+footer p{padding: 0rem;}
+
+.date, figcaption{
+  font-style: italic;
+  font-weight: lighter;
+}
+
+figcaption{text-align: center;}
+
+figcaption, footer p{font-size: 0.8rem;}
+
+/* || GENERAL STYLES - IMGAGES AND TABLES || */
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-bottom: 1rem;
+}
+
+table, fieldset {
+  background: #f1f1f1;
+  border: 0.1rem solid #e1e2db;
+}
+
+table{margin: 1rem auto;}
+
+table th {
+  text-align: left;
+  font-weight: bolder;
+  background: #ccd4da;
+}
+
+table tr:nth-of-type(odd){background: #e4e4e4;}
+
+table th, td {
+  font-size: 0.85rem;
+  padding: 0.2rem;
+}
+
+fieldset{
+  margin: 1.6rem;
+  width: 25rem;
+}
+
+label{
+  width: 15rem;
+  float: left;
+}
+
+input:focus, select:focus, textarea:focus{background-color: #e4e4e4;}
+
+/* || WEATHER || */
+#temp p{
+  font-size: 12rem;
+  padding: 4rem 0rem 7rem 0rem;
+  text-align: center;
+}
+
+/* || SITEWIDE AND RESPONSIVENESS ||*/
+header{grid-area: header;}
+nav{grid-area: nav;}
+main{grid-area: content1;}
+article{grid-area: content2;}
+footer{grid-area: footer;}
+
+/* || MOBILE || */
+@media (max-width:640px){
+  .navMenu{display: none;}
+
+  .container{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content1"
+      "content2"
+      "footer";
+  }
+
+  h1{
+    background: #ffffff;
+    font-size: 2.3rem;
+  }
+  header h2{
+    background: #f7fae7f2;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.6rem;
+  }
+
+  p{font-size: 0.8rem;}
+
+  footer p{padding-left: 1.6rem;}
+
+  /*Dropdown*/
+  .icon {
+    width: 30px;
+    height: 2px;
+    background: #212122; 
+    margin: 6px 0;
+    }
+
+    .dropbtn {
+    background: #ffffff;
+    padding: 1rem 1rem;
+    border: none;
+    }
+
+    .dropdown {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    display: inline-block;
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0%;
+    background: #f1f1f1;
+    min-width: 9rem;
+    overflow: auto;
+    z-index: 1;
+    }
+
+    .dropdown-content a {
+      font-size: 0.8rem;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      }
+
+    .show {display: block;}
+}
+
+/* ||   FOR TABLES, FORMS AND #TEMP IN MOBILE AND SMALL TABLETS || */
+@media (max-width: 760px){
+
+  #temp p{font-size: 9rem;}
+
+  fieldset{width: 80%;}
+
+  label{
+    width: 100%;
+    float: none;
+    text-align: left;
+    display: block;
+  }
+
+  select, label, textarea{font-size: 0.8rem;}
+
+  table, thead, tbody, th, td, tr { display: block;}
+  
+  thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+  }
+  
+  td { 
+		border: none;
+		border-bottom: 1px solid #eeeeee; 
+		position: relative;
+		padding-left: 50%; 
+  }
+  
+  td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+  }
+  
+  td:nth-of-type(1):before { content: "Förnamn"; }
+	td:nth-of-type(2):before { content: "Efternamn"; }
+	td:nth-of-type(3):before { content: "Mail"; }
+  td:nth-of-type(4):before { content: "Telefonnummer"; }
+
+  #historyNames td:nth-of-type(1):before { content: "Vardagsnamn";}
+  #historyNames td:nth-of-type(2):before { content: "Namn";}
+
+  caption{padding: 0.6rem;}
+}
+
+/* || TABLET || */
+@media (min-width: 641px){
+  .container{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "nav nav nav nav nav"
+      ". header header header . "
+      ". content1 content1 content1 . "
+      ". content2 content2 content2 . "
+      ". footer footer footer . ";
+  }
+
+  .bgPicture{display: none;}
+  .dropdown{display: none;}
+
+  nav a {
+    font-size: 0.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.6rem;
+  }
+  nav ul{
+    display: flex;
+    background: #ffffff;
+    justify-content: space-around;
+    padding-top: 0.6rem;
+    box-shadow: 0 0 4px 4px #e8ebd9;
+  }
+
+  .navLi{padding: 0.6rem;}
+
+  #active{font-weight: bolder;}
+
+ nav a:focus{
+    outline: none;
+    background: #e7e7e7;
+  }
+
+  header{background: #f7fae7f2;}
+
+  h1{
+    padding-top: 2.9rem;
+    font-size: 3rem;
+  }
+
+  header h2{
+    font-size: 1.7rem;
+    padding-top: 0.1rem;
+    padding-left: 3rem;
+  }
+  
+  footer p{padding: 0.2rem;}
+}
+
+/* || LAPTOP AND LARGER SCREENS || */
+@media (min-width: 1008px){
+  .container{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "nav nav nav nav nav nav nav"
+      ". content1 content1 content1 . . ."
+      ". content2 content2 content2 . . .";
+  }
+
+  nav a {font-size: 1rem;}
+
+  .headerWrap{
+    width: 360px;
+    height: 160px;
+    background: #f7fae780;
+    margin: 10% auto;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .headerWrap, footer{ box-shadow: 0 0 4px 4px #e8ebd9;}
+
+  .headerText{
+    position: absolute;
+    width: inherit;
+    height: auto;
+    top: 0%;
+    text-align: center;
+  }
+
+  header{
+    background: none;
+    position: fixed;
+    top: 10%;
+    right: 6%;
+  }
+
+  header h2{padding-left: 1.6rem;}
+
+  footer{
+    position: fixed;
+    padding: 1.3rem 1.7rem 0.6rem 4rem;
+    bottom: 0%;
+    right: 0%;
+    border-radius: 75% 0% 0% 0%;
+  }
+}
+
+@media (min-width: 1700px){
+  html{font-size: 150%;}
+  
+  .headerWrap{
+    width: 560px;
+    height: 300px;
+  }
+
+  h1{font-size: 4.3rem;}
+
+  header h2{
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+
+  .headerText{top: 5%;}
+}

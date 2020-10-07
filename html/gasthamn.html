@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>Djupvik - Gästhamn</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Parisienne&family=Tangerine&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/weather.js" type="module"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Djupviks hamn erbjuder ett underbart fiskeläge. I gästhamnen får du 
+    tillgång till vatten, el och servicehus.">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="headerWrap">
+                <div class="headerText">
+                    <h1>Djupvik</h1>
+                    <h2>~ Upplev den gotländska kusten ~</h2>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navMenu">
+            <ul>
+                <li class="navLi"><a href="../index.html">Hem</a></li>
+                <li class="navLi"><a href="#" id="active">Gästhamn</a></li>
+                <li class="navLi"><a href="turistmal.html">Turistmål</a></li>
+                <li class="navLi"><a href="historia.html">Historia</a></li>
+                <li class="navLi"><a href="forening/medlemsinfo.html">Medlemsinformation</a></li>
+                <li class="navLi"><a href="english.html">English</a></li>
+                <li class="navLi"><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="dropdown">
+            <div onclick="navClick()" class="dropbtn">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+            <nav id="navDropdown" class="dropdown-content">
+                <a href="../index.html">Hem</a>
+                <a href="#">Gästhamn</a>
+                <a href="turistmal.html">Turistmål</a>
+                <a href="historia.html">Historia</a>
+                <a href="forening/medlemsinfo.html">För medlemmar</a>
+                <a href="english.html">English</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+
+        <main>
+            <figure class="bgPicture">
+                <img src="../assets/images/bgKarlso_mobil.jpg" alt="Vy över vattnet och Stora Karlsö">
+            </figure>
+            <section>
+                <h2>Gästhamn</h2>
+                <p>Gästbåtar är hjärtligt välkomna!</p>
+
+                <h3>Aktuell temperatur</h3>
+
+                <p>Under kommande timme ska det vara:</p>
+                <div id="temp"></div>
+                <p> Celsius i Djupvik</p>
+
+                <h3>Gästplatser</h3>
+                <p>
+                    Vid normalvattendjup är djupet 3 meter i huvuddelen av hamnen. Vatten och el finns utdraget på 
+                    kajerna. I land kan vi erbjuda ett modernt servicehus med WC, dusch och tvättmaskin.
+                </p>
+                <p>Ring gärna hamnfogden för att få reda på aktuellt läge.</p>
+                <p>
+                    Dygnshyra 150:- /dygn* <br>
+                    El-anslutning 50:-/dygn 
+                </p>
+                <p>*inkluderat kort för tillträde till servicehuset och 20:- för två duschar</p>
+                <p>Hamnfogde Bo Lautin Mobil 0707 - 92 03 10</p>
+                <figure>
+                    <img src="../assets/images/litenBat.jpg" alt="Förtöjd liten båt vid kajen">
+                </figure>
+            </section>
+        </main>
+
+        <footer>
+            <p>© Copyright 2020 | Djupvikshamn.se</p>
+            <p>Mailadress: <a href="info@djupvikshamn.se">info@djupvikshamn.se</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

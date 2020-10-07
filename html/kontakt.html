@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>Djupvik - Kontakt</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Parisienne&family=Tangerine&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/menu.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Djupviks hamn erbjuder ett underbart fiskeläge. Behöver du kontakta oss
+    finner du uppgifter och formulär här.">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="headerWrap">
+                <div class="headerText">
+                    <h1>Djupvik</h1>
+                    <h2>~ Upplev den gotländska kusten ~</h2>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navMenu">
+            <ul>
+                <li class="navLi"><a href="../index.html">Hem</a></li>
+                <li class="navLi"><a href="gasthamn.html">Gästhamn</a></li>
+                <li class="navLi"><a href="turistmal.html">Turistmål</a></li>
+                <li class="navLi"><a href="historia.html">Historia</a></li>
+                <li class="navLi"><a href="forening/medlemsinfo.html">Medlemsinformation</a></li>
+                <li class="navLi"><a href="english.html">English</a></li>
+                <li class="navLi"><a href="#" id="active">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="dropdown">
+            <div onclick="navClick()" class="dropbtn">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+            <nav id="navDropdown" class="dropdown-content">
+                <a href="../index.html">Hem</a>
+                <a href="gasthamn.html">Gästhamn</a>
+                <a href="turistmal.html">Turistmål</a>
+                <a href="historia.html">Historia</a>
+                <a href="forening/medlemsinfo.html">För medlemmar</a>
+                <a href="english.html">English</a>
+                <a href="#">Kontakt</a>
+            </nav>
+        </div>
+
+        <main>
+            <figure class="bgPicture">
+                <img src="../assets/images/bgKarlso_mobil.jpg" alt="Vy över vattnet och Stora Karlsö">
+            </figure>
+            <section>
+                <h2>Kontaktuppgifter</h2>
+                <p>
+                    Hamnfogde Bo Lautin, mobil 0707-920310
+                </p>
+                <p>
+                    Djupviks hamnförening <br>
+                    c/o Ekholm <br>
+                    Eksta Hägur 170 <br>
+                    623 54 Klintehamn
+                </p>
+                <figure>
+                    <img src="../assets/images/fiskare.jpg" alt="En person som fiskar från kajen">
+                </figure>
+            </section>
+        </main>
+
+        <article>
+            <h2>Kontaktformulär</h2>
+            <form action="tack.html" method="GET">
+                <fieldset>
+                    <p>
+                        <label for="Headline">Rubrik*</label>
+                        <input type="text" id="Headline" name="headline" required />
+                    </p>
+                    <p>
+                        <label for="Topic">Vad gäller ditt ärende?</label>
+                        <select name="topic" id="Topic">
+                            <option value="berth">Båtplats</option>
+                            <option value="member">Medlem</option>
+                            <option value="other">Övrigt</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="About">Beskriv ditt ärende*</label>
+                        <textarea id="About" name="about" rows="10" cols="30" required></textarea>
+                    </p>
+                    <p>Hur vill du att vi återkopplar?</p>
+                    <ul>
+                        <li class="radio">
+                            <input type="radio" id="Mail" name="feedback" value="mail" />
+                            <label for="Mail">Mail</label>
+                        </li>
+                        <li class="radio">
+                            <input type="radio" id="Phone" name="feedback" value="phone" />
+                            <label for="Phone">Telefon</label>
+                        </li>
+                        <li class="radio">
+                            <input type="radio" id="None" name="feedback" value="none" />
+                            <label for="None">Inte alls</label>
+                        </li>
+                    </ul>
+                    <p>
+                        <label for="Email">Mail</label>
+                        <input type="email" id="Email" name="mail"/>
+                    </p>
+                    <p>
+                        <label for="Tel">Telefon</label>
+                        <input type="tel" id="Tel" name="telefon"/>
+                    </p>
+                    <p>
+                        <input type="submit" value="Skicka">
+                        <input type="reset" value="Rensa">
+                    </p>
+                </fieldset>
+            </form>
+
+            <figure>
+                <img src="../assets/images/tryggHansa.jpg" alt="Livboj och vy över Lilla Karlsö">
+            </figure>
+        </article>
+
+        <footer>
+            <p>© Copyright 2020 | Djupvikshamn.se</p>
+            <p>Mailadress: <a href="info@djupvikshamn.se">info@djupvikshamn.se</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
